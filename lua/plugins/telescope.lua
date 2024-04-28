@@ -14,9 +14,11 @@ return {
        
         vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
        
-        -- vim.keymap.set('n', '<leader>lg', builtin.live_grep, {})
+        vim.keymap.set('v', '<C-f>', builtin.grep_string, {})
+        
+        vim.keymap.set('n', '<C-f>', builtin.live_grep, {})
        
-        vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
+        vim.keymap.set('n', '<leader>bb', builtin.buffers, {})
        
         vim.keymap.set('n', '<leader>hh', builtin.help_tags, {})
         
