@@ -6,7 +6,8 @@ return {
 	local configs = require("nvim-treesitter.configs")
 	configs.setup({
 		ensure_installed = { 
-			"c", "cpp", "dockerfile", "gitcommit", "gitignore", "lua", "python", "rust", "vim", "vimdoc"
+			"c", "cpp", "cmake", "dockerfile", "gitcommit", "gitignore", "lua", 
+            "python", "rust", "vim", "vimdoc"
 		},
 
 		sync_install = false,
