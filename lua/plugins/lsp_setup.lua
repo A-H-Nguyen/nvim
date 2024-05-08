@@ -6,7 +6,6 @@ return {
         "williamboman/mason-lspconfig.nvim",
         "hrsh7th/nvim-cmp",
         "hrsh7th/cmp-nvim-lsp",
-        "j-hui/fidget.nvim",
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip"
     },
@@ -15,7 +14,6 @@ return {
         local cmp = require('cmp')
         local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-        require("fidget").setup({})
         require('mason').setup()
         require('mason-lspconfig').setup({
             ensure_installed = {
