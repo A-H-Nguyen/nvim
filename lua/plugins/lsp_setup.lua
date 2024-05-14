@@ -45,8 +45,8 @@ return {
                 ['<CR>'] = cmp.mapping.confirm({select = false}),
 
                 -- Ctrl n/p for next/prev completion item
-                ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-                ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+                ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
+                ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
             }),
             snippet = {
                 expand = function(args)
