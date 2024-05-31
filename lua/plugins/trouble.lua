@@ -17,6 +17,6 @@ return {
         vim.keymap.set("n", "<leader>dd", function() trouble.toggle("document_diagnostics") end)
         vim.keymap.set("n", "<leader>dq", function() trouble.toggle("quickfix") end)
         vim.keymap.set("n", "<leader>dl", function() trouble.toggle("loclist") end)
-        vim.keymap.set("n", "gR",         function() trouble.toggle("lsp_references") end)
+        vim.keymap.set("n", "<leader>gr", function() trouble.toggle("lsp_references") end)
     end
 }
