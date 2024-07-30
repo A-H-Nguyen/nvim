@@ -18,6 +18,8 @@ return {
         require('mason-lspconfig').setup({
             ensure_installed = {
                 "clangd",
+                "cmake",
+                "pylsp",
                 "lua_ls",
             },
             handlers = {
