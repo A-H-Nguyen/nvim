@@ -25,7 +25,48 @@ return {
                 function(server) -- default setup
                     require('lspconfig')[server].setup({
                         capabilities = lsp_capabilities,
+                        settings = {
+                            Lua = {
+                                diagnostics = {
+                                    globals = { 'vim' }
+                                }
+                            }
+                        }
                     })
+                end,
+
+                ["lua_ls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.lua_ls.setup {
+                        capabilities = lsp_capabilities,
+                        settings = {
+                            Lua = {
+                                diagnostics = {
+                                    globals = {"vim"},
+                                }
+                            }
+                        }
+                    }
+                end,
+
+                ["pylsp"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.pylsp.setup {
+                        capabilities = lsp_capabilities,
+                        settings = {
+                            pylsp = {
+                                plugins = {
+                                    flake8 = {
+                                        enabled = false,
+                                    },
+                                    pycodestyle = {
+                                        enabled = false,
+                                    },
+                                    -- pyflakes = {enabled = false},
+                                },
+                            },
+                        },
+                    }
                 end,
           },
         })
