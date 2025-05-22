@@ -24,3 +24,8 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 --         },
 --         cache_enabled = 1,
 --       }
+
+vim.cmd([[
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+]])
