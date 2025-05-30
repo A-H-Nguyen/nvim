@@ -2,10 +2,8 @@ vim.g.mapleader = " "
 
 -- Spruce up file navigation
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
--- vim.keymap.set("n", "<leader>bp", vim.cmd.bp)
--- vim.keymap.set("n", "<leader>bn", vim.cmd.bn)
-vim.keymap.set("n", "<leader>p", vim.cmd.bp)
-vim.keymap.set("n", "<leader>n", vim.cmd.bn)
+vim.keymap.set("n", "<leader>bp", vim.cmd.bp)
+vim.keymap.set("n", "<leader>bn", vim.cmd.bn)
 
 -- Shortcuts for splitting windows
 vim.keymap.set("n", "<leader>_", vim.cmd.sp)
