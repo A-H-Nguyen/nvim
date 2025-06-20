@@ -14,9 +14,9 @@ return {
             desc = "Diagnostics (Trouble)",
         },
         {
-            "<leader>dd",
+            "<leader>dc",
             "<cmd>Trouble diagnostics toggle focus=true win.position=bottom filter.buf=0<cr>",
-            desc = "Buffer Diagnostics (Trouble)",
+            desc = "Current Buffer/Document Diagnostics (Trouble)",
         },
         {
             "<leader>ds",
