@@ -9,7 +9,7 @@ vim.opt.smartindent = true
 -- Set display settings
 vim.opt.wrap = true
 vim.opt.number = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.showmatch = true
 vim.opt.hlsearch = true
