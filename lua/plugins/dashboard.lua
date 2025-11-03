@@ -4,36 +4,19 @@ return {
   config = function()
     require('dashboard').setup {
       theme = 'hyper',
--- disable_move    --  default is false disable move keymap for hyper
--- shortcut_type   --  shorcut type 'letter' or 'number'
--- shuffle_letter  --  default is true, shortcut 'letter' will be randomize, set to false to have ordered letter.
--- change_to_vcs_root -- default is false,for open file in hyper mru. it will change to the root of vcs
--- config = {},    --  config used for theme
--- hide = {
---   statusline    -- hide statusline default is true
---   tabline       -- hide the tabline
---   winbar        -- hide winbar
--- },
--- preview = {
---   command       -- preview command
---   file_path     -- preview file path
---   file_height   -- preview file height
---   file_width    -- preview file width
--- },
-      -- theme = 'doom',
-      -- config = {
-      --   center = {{
-      --     icon = '',
-      --     icon_hl = 'group',
-      --     desc = 'description',
-      --     desc_hl = 'group',
-      --     key = 'shortcut key in dashboard buffer not keymap !!',
-      --     key_hl = 'group',
-      --     key_format = ' [%s]', -- `%s` will be substituted with value of `key`
-      --     action = '',
-      --   },},
-      --   footer = {},
-      -- }
+      config = {
+      -- shortcut = {
+      --   -- action can be a function type
+      --   { desc = string, group = 'highlight group', key = 'shortcut key', action = 'action when you press key' },
+      -- },
+      packages = { enable = true }, -- show how many plugins neovim loaded
+      -- limit how many projects list, action when you press key or enter it will run this action.
+      -- action can be a function type, e.g.
+      -- action = func(path) vim.cmd('Telescope find_files cwd=' .. path) end
+      -- project = { enable = true, limit = 8, icon = 'your icon', label = '', action = 'Telescope find_files cwd=' },
+      -- mru = { enable = true, limit = 10, icon = 'your icon', label = '', cwd_only = false },
+      -- footer = {}, -- footer
+      }
     }
   end,
   dependencies = { {'nvim-tree/nvim-web-devicons'}}
