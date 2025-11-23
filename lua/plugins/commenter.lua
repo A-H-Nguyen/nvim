@@ -1,5 +1,3 @@
---[[ I am using Ctrl + m as the prefix for all the commenting stuff ]]
-
 return {
     'numToStr/Comment.nvim',
     lazy = false,

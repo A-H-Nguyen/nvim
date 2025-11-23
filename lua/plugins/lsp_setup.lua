@@ -1,14 +1,11 @@
 return {
-    "neovim/nvim-lspconfig",
-
+    "mason-org/mason-lspconfig.nvim",
     dependencies = {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
     },
 
     config = function ()
-        local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-
         require('mason').setup()
         require('mason-lspconfig').setup({
             ensure_installed = {
@@ -16,49 +13,45 @@ return {
                 "pylsp",
                 "lua_ls",
             },
-            handlers = {
-                function(server) -- default setup
-                    require('lspconfig')[server].setup({
-                        capabilities = lsp_capabilities,
-                        settings = {
-                            Lua = {
-                                diagnostics = {
-                                    globals = { 'vim' }
-                                }
-                            }
-                        }
-                    })
-                end,
+        })
 
-                ["lua_ls"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.lua_ls.setup {
-                        capabilities = lsp_capabilities,
-                        settings = {
-                            Lua = {
-                                diagnostics = {
-                                    globals = {"vim"},
-                                }
-                            }
-                        }
-                    }
-                end,
+        -- handlers = {
+        --     function(server) -- default setup
+        --         require('lspconfig')[server].setup({
+        --             capabilities = lsp_capabilities,
+        --             settings = {
+        --                 Lua = {
+        --                     diagnostics = {
+        --                         globals = { 'vim' }
+        --                     }
+        --                 }
+        --             }
+        --         })
+        --     end,
 
-                ["pylsp"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.pylsp.setup {
-                        capabilities = lsp_capabilities,
-                        settings = {
-                            pylsp = {
-                                plugins = {
-                                    pycodestyle = {
-                                        enabled = false,
-                                    },
-                                },
-                            },
+        --     ["lua_ls"] = function()
+        --         local lspconfig = require("lspconfig")
+        --         lspconfig.lua_ls.setup {
+        --             capabilities = lsp_capabilities,
+        --             settings = {
+        --                 Lua = {
+        --                     diagnostics = {
+        --                         globals = {"vim"},
+        --                     }
+        --                 }
+        --             }
+        --         }
+        --     end,
+
+        vim.lsp.config('pylsp', {
+            settings = {
+                ['pylsp'] = {
+                    plugins = {
+                        pycodestyle = {
+                            enabled = false,
                         },
-                    }
-                end,
+                    },
+                },
             },
         })
 
