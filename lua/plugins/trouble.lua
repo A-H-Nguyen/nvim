@@ -38,5 +38,12 @@ return {
             "<cmd>Trouble qflist toggle focus=true win.position=bottom<cr>",
             desc = "Quickfix List (Trouble)",
         },
+
+        -- NOTE: This only works if both trouble and todo-comments plugins are installed:
+        {
+            "<leader>dt",
+            "<cmd>Trouble todo toggle focus=true win.position=bottom<cr>",
+            desc = "List TODOs and other notes",
+        }
     },
 }
