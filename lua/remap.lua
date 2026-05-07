@@ -13,6 +13,7 @@ vim.keymap.set("n", "<leader>|", vim.cmd.vs)
 vim.keymap.set('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()<cr>')
 vim.keymap.set('n', '<leader>dp', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
 vim.keymap.set('n', '<leader>dn', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+-- vim.diagnostic.jump()
 
 -- buffer-local keybindings
 -- these only work if you have an active language server
