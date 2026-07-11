@@ -7,7 +7,7 @@ return {
       -- alternatively you can set options with vim.g.grug_far = { ... }
       require('grug-far').setup({})
 
-      vim.keymap.set('n', '<leader>rr', function ()
+      vim.keymap.set('n', '<leader>ro', function ()
         require('grug-far').open({ transient = true })
       end,  { desc = 'Open grug' });
 
@@ -18,5 +18,9 @@ return {
       vim.keymap.set('n', '<leader>ra', function ()
         require('grug-far').get_instance(0):abort()
       end,  { desc = 'Abort current grug task' })
+
+      vim.keymap.set('n', '<leader>rr', function ()
+        require('grug-far').get_instance(0):replace()
+      end,  { desc = 'Invoke grug replacement' });
     end
 }
