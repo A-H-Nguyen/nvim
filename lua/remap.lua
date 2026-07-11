@@ -9,7 +9,10 @@ vim.keymap.set("n", "<leader>bn", vim.cmd.bn)
 vim.keymap.set("n", "<leader>_", vim.cmd.sp)
 vim.keymap.set("n", "<leader>|", vim.cmd.vs)
 
--- Add keybinds for diagnostics. NOTE: You don't need trouble.nvim to use these!
+-- Add keybinds for diagnostics. 
+-- NOTE: You don't need trouble.nvim to use these!
+-- TODO: These commands are deprecated but the newer ones are so fucking
+--       confusing to me, so I'll figure that out later
 vim.keymap.set('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()<cr>')
 vim.keymap.set('n', '<leader>dp', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
 vim.keymap.set('n', '<leader>dn', '<cmd>lua vim.diagnostic.goto_next()<cr>')
