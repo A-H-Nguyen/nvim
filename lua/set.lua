@@ -1,4 +1,4 @@
--- Set indentation and tab settings
+-- Set default indentation and tab settings
 vim.opt.autoindent = true
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
