@@ -9,8 +9,11 @@ return {
       require('lualine').setup({
         options = {
           icons_enabled = true,
-          theme = 'auto',
+          theme = 'base16',
         },
+        --
+        -- Defaults:
+        --
         -- sections = {
         --   lualine_a = {'mode'},
         --   lualine_b = {'branch', 'diff', 'diagnostics'},
@@ -22,20 +25,8 @@ return {
         --   lualine_z = {'location'}
         -- },
         sections = {
-          lualine_a = {},
           lualine_b = {{'filename', path=1,}},
-          lualine_c = {},
-          lualine_x = {},
           lualine_y = {'location'},
-          lualine_z = {}
-        },
-        inactive_sections = {
-          lualine_a = {},
-          lualine_b = {},
-          lualine_c = {},
-          lualine_x = {},
-          lualine_y = {},
-          lualine_z = {}
         },
       })
     end
